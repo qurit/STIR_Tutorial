@@ -1,0 +1,47 @@
+OSMAPOSLParameters :=
+
+        objective function type:= PoissonLogLikelihoodWithLinearModelForMeanAndProjData
+	
+	PoissonLogLikelihoodWithLinearModelForMeanAndProjData Parameters:=
+
+		; input
+		input file := g_noise.hs
+		; output
+		xy output image size (in pixels) := 128
+		Z output image size (in pixels):= 128
+		z zoom := 0.5
+
+		projector pair type := Matrix
+			Projector Pair Using Matrix Parameters :=
+			Matrix type := SPECT UB
+			Projection Matrix By Bin SPECT UB Parameters:=
+			
+				maximum number of sigmas:= 2.0
+
+				;PSF type of correction { 2D // 3D // Geometrical }
+				psf type:= 2D
+                collimator slope := 0.02
+                collimator sigma 0(cm) := 0.1466
+
+				;Attenuation correction { Simple // Full // No }
+				attenuation type := No
+
+				;Mask properties { Cylinder // Attenuation Map // Explicit Mask // No}
+				mask type := No
+
+                                keep all views in cache := 1
+
+			End Projection Matrix By Bin SPECT UB Parameters:=
+
+	End Projector Pair Using Matrix Parameters :=
+
+	end PoissonLogLikelihoodWithLinearModelForMeanAndProjData Parameters:=
+
+	output filename prefix := f_recon
+
+	number of subsets:= 2
+	number of subiterations:= 8
+	Save estimates at subiteration intervals:= 8
+
+
+END :=

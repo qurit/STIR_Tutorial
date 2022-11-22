@@ -1,0 +1,29 @@
+!INTERFILE  :=
+name of data file := f.v
+!imaging modality := nucmed
+!GENERAL DATA :=
+!GENERAL IMAGE DATA :=
+!type of data := Tomographic
+imagedata byte order := LITTLEENDIAN
+process status := Reconstructed
+!number format := float
+!number of bytes per pixel := 4
+number of dimensions := 3
+matrix axis label [1] := x
+!matrix size [1] := 128
+scaling factor (mm/pixel) [1] := 2
+matrix axis label [2] := y
+!matrix size [2] := 128
+scaling factor (mm/pixel) [2] := 2
+matrix axis label [3] := z
+!matrix size [3] := 128
+scaling factor (mm/pixel) [3] := 2
+first pixel offset (mm) [1] := -240.933
+first pixel offset (mm) [2] := -240.933
+first pixel offset (mm) [3] := 0
+number of time frames := 1
+!END OF INTERFILE :=
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Term
